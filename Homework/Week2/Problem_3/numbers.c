@@ -18,3 +18,4 @@ int main(){
     return 0;
 
 }
+// ot execute bash -> ./numbers.out < numbers.txt 

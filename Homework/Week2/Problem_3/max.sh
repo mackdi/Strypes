@@ -1,1 +1,1 @@
-echo "Heloooo"
+./numbers.out

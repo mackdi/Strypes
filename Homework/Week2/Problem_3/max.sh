@@ -1,1 +1,1 @@
-./numbers.out
+./numbers.out < numbers.txt

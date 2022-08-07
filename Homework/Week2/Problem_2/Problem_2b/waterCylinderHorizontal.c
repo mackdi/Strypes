@@ -13,7 +13,7 @@ int main(){
     scanf("%f", &L);
     
     //A = ((R*R)*acos((R - H)/R)-(R - H) * sqrt((2*R)* H)-(H*H));
-    A = ((R * R) * acos((R-H)/R) - (R-H) * sqrt((2*R)*H - (H*H)));
+    A = ((R * R) * acos((R-H)/R) - (R-H) * sqrt((2*R)*H - (H*H))); //nan?
     V = A * L;
     printf("Volume of the water is: %f m3\n", V);
 

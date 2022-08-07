@@ -2,10 +2,10 @@
 
 int main(){
     float num1, num2, num3, max;
-    FILE* numbers = fopen("numbers.txt", "r");
-    fscanf(numbers, "%f %f %f", &num1, &num2 , &num3);
+    //FILE* numbers = fopen("numbers.txt", "r");
+    //fscanf(numbers, "%f %f %f", &num1, &num2 , &num3);
 
-    //scanf("%f %f %f", &num1, &num2 , &num3); must use ./numbers.out < numbers.txt
+    scanf("%f %f %f", &num1, &num2 , &num3); 
    
     if (num1 >= num2 && num1 >= num3)
         max = num1;

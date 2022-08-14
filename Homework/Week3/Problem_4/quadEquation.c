@@ -19,11 +19,8 @@ int quadEq(double a, double b, double c, double* root1, double* root2){
 }
 
 int main(){
-
     double a,b,c,r1,r2;
-
-   
-
+    
     while (scanf("%lf %lf %lf", &a,&b,&c)!=EOF)
     {
         quadEq(a,b,c,&r1,&r2);

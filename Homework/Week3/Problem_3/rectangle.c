@@ -9,7 +9,6 @@ int rectangle(double w, double h, double*S,double*P){
         *S = w*h;
         return 0;
     }
-    
 }
 
 int main(){

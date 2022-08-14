@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include <stdint.h>
 
+
 unsigned onesCount(uint64_t mask){
     int count = 0;
-
     while (mask > 0)
     {
         if(mask & 1)
@@ -17,7 +17,7 @@ unsigned onesCount(uint64_t mask){
 
 int main(){
     //is it necessary a to be uint64_t ?
-    uint64_t a = 5;
+    uint64_t a = 1000000;
     //onesCount(a);
     printf("%d\n", onesCount(a));
 

@@ -14,7 +14,7 @@ int triangle(double a, double b, double c, double*S,double*P){
 
 int main(){
 double a,b,c,P,S;
-//TODO wrong input check
+//TODO wrong input check - when enter char -> infinite loop
 while (scanf("%lf %lf %lf", &a,&b,&c)!=EOF)
 {
     if(triangle(a,b,c,&S,&P)){

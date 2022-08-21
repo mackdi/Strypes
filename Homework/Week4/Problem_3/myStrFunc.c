@@ -3,6 +3,8 @@
 
 size_t myStrlen(char * string);
 size_t myStrnlen(char * string, size_t max);
+//size_t myStrncpy(char * string, size_t max);
+//TODO  strcpy() strncpy() strcat() strncat() strcmp() strncmp() strstr()
 
 
 int main(){

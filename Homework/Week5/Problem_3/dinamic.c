@@ -7,17 +7,9 @@ double randfrom(double min, double max) ;
 
 int main(int argc, char const *argv[])
 {
+    //TODO FIX SECOND TIME RANDOM STARTS FROM 0???
     srand(time(NULL));
-    //time_t t;
-
-    /* Intializes random number generator */
-   //srand((unsigned) time(&t));
-
     
-    // printf ( "%d\t", ( rand() * 5 ) / RAND_MAX );
-    // printf ( "%d\n", rand() % 5 );
-
-
     int n;
     scanf("%d", &n);
     double min = 0.0;
@@ -58,8 +50,6 @@ int main(int argc, char const *argv[])
         tempArr[i] = randfrom(min,max);
     }  
 
-
-
     //releasing the memory held by pointer p
     free(arr);
     //assigning the address held by q to p for the array
@@ -71,9 +61,7 @@ int main(int argc, char const *argv[])
     {
         printf("n+m array: %.1f\n", arr[i]);
     } 
-
     //Witout tempArr; will use realock()
-
     int p;
     scanf("%d", &p);
     min = 2.0;
@@ -84,36 +72,25 @@ int main(int argc, char const *argv[])
     {
        return EXIT_FAILURE;
     }
-    
-    
+
     //Adding more random numbers
     for (int i = (n+m+1); i < (n+m+p); i++)
     {
-        tempArr[i] = randfrom(min,max);
+        arr[i] = randfrom(min,max);
     }  
 
     for (size_t i = 0; i < m+n+p; i++)
     {
-        printf("n+m+p array: %.1f\n", tempArr[i]);
+        printf("n+m+p array: %.1f\n", arr[i]);
     } 
 
-
-
-
-
-    
-
-    /* code */
     return 0;
 }
 
 
 double randfrom(double min, double max) 
 {
-    //time_t t;
-    
     double range = (max - min); 
     double div = RAND_MAX / range;
     return min + (rand() / div);
-    
 }

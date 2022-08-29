@@ -7,7 +7,7 @@ double randfrom(double min, double max) ;
 
 int main(int argc, char const *argv[])
 {
-
+    srand(time(NULL));
     //time_t t;
 
     /* Intializes random number generator */
@@ -53,7 +53,7 @@ int main(int argc, char const *argv[])
     } 
 
     //Adding more random numbers
-    for (int i = (abs(n+1)); i < (n+m); i++)
+    for (int i = (n+1); i < (n+m); i++)
     {
         tempArr[i] = randfrom(min,max);
     }  
@@ -80,6 +80,11 @@ int main(int argc, char const *argv[])
     max = 3.0;
 
     arr = realloc(arr, (n+m+p) * sizeof(double));
+    if (NULL == arr)
+    {
+       return EXIT_FAILURE;
+    }
+    
     
     //Adding more random numbers
     for (int i = (n+m+1); i < (n+m+p); i++)
@@ -106,7 +111,7 @@ int main(int argc, char const *argv[])
 double randfrom(double min, double max) 
 {
     //time_t t;
-    //srand(time(NULL));
+    
     double range = (max - min); 
     double div = RAND_MAX / range;
     return min + (rand() / div);

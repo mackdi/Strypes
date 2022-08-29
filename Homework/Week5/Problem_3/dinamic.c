@@ -7,15 +7,12 @@ double randfrom(double min, double max) ;
 
 int main(int argc, char const *argv[])
 {
-    //TODO FIX SECOND TIME RANDOM STARTS FROM 0???
     srand(time(NULL));
-    
-    int n;
+    unsigned n,m,p;
     scanf("%d", &n);
     double min = 0.0;
     double max = 1.0;
-
-
+    
     double *arr, *tempArr;
     arr = (double *)malloc(n*sizeof(double));
 
@@ -30,8 +27,6 @@ int main(int argc, char const *argv[])
     }  
 
     //NEW ARRAY
-
-    int m;
     scanf("%d", &m);
     min = 1.0;
     max = 2.0;
@@ -45,7 +40,7 @@ int main(int argc, char const *argv[])
     } 
 
     //Adding more random numbers
-    for (int i = (n+1); i < (n+m); i++)
+    for (int i = (n); i < (n+m); i++)
     {
         tempArr[i] = randfrom(min,max);
     }  
@@ -62,7 +57,6 @@ int main(int argc, char const *argv[])
         printf("n+m array: %.1f\n", arr[i]);
     } 
     //Witout tempArr; will use realock()
-    int p;
     scanf("%d", &p);
     min = 2.0;
     max = 3.0;
@@ -74,7 +68,7 @@ int main(int argc, char const *argv[])
     }
 
     //Adding more random numbers
-    for (int i = (n+m+1); i < (n+m+p); i++)
+    for (int i = (n+m); i < (n+m+p); i++)
     {
         arr[i] = randfrom(min,max);
     }  

@@ -12,7 +12,7 @@ int main(int argc, char const *argv[])
     scanf("%d", &n);
     double min = 0.0;
     double max = 1.0;
-    
+
     double *arr, *tempArr;
     arr = (double *)malloc(n*sizeof(double));
 

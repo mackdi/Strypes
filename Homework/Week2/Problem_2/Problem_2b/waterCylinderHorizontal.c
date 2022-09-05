@@ -3,7 +3,8 @@
 
 #define _USE_MATH_DEFINES
 
-int main(){
+int main()
+{
     float R, L, H, V, A;
     printf("Pleas enter radius: ");
     scanf("%f", &R);
@@ -11,12 +12,10 @@ int main(){
     scanf("%f", &H);
     printf("Please enter water height: ");
     scanf("%f", &L);
-    //Area
-    A = ((R * R) * acos((R-H)/R) - (R-H) * sqrt((2*R)*H - (H*H))); 
-    //Volume of the water
+    // Area
+    A = ((R * R) * acos((R - H) / R) - (R - H) * sqrt((2 * R) * H - (H * H)));
+    // Volume of the water
     V = A * L;
-    
     printf("Volume of the water is: %f m3\n", V);
-
-return 0;
+    return 0;
 }

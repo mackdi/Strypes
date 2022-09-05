@@ -1,22 +1,23 @@
 #include <stdio.h>
 #include <string.h>
 
-size_t myStrlen(char * string);
-size_t myStrnlen(char * string, size_t max);
-//size_t myStrncpy(char * string, size_t max);
-//TODO  strcpy() strncpy() strcat() strncat() strcmp() strncmp() strstr()
+size_t myStrlen(char *string);
+size_t myStrnlen(char *string, size_t max);
+char * myStrcpy(char *src, const char *dest);
+// TODO strncpy() strcat() strncat() strcmp() strncmp() strstr()
 
+int main()
+{
 
-int main(){
-
-    char a[500]="";
-    //printf("%ld\n", myStrlen(a));
-    printf("%ld\n", myStrnlen(a,20));
-
+    char a[500] = "";
+    // printf("%ld\n", myStrlen(a));
+    printf("%ld\n", myStrnlen(a, 20));
+    
     return 0;
 }
 
-size_t myStrlen(char * string){
+size_t myStrlen(char *string)
+{
 
     int sum = 0;
 
@@ -36,7 +37,8 @@ size_t myStrlen(char * string){
     return sum;
 }
 
-size_t myStrnlen(char * string, size_t max){
+size_t myStrnlen(char *string, size_t max)
+{
 
     int sum = 0;
 
@@ -51,4 +53,22 @@ size_t myStrnlen(char * string, size_t max){
     }
 
     return sum;
+}
+
+char * myStrcpy(char *dest, const char *src)
+{
+    // return if no memory is allocated to the destination
+    if (dest == NULL)
+    {
+        return NULL;
+    }
+    char *ptr = dest;
+    while (*src != '\0')
+    {
+        *dest = *src;
+        dest++;
+        src++;
+    }
+    *dest = '\0';
+    return ptr;
 }

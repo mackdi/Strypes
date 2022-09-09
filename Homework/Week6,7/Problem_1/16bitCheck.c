@@ -11,13 +11,13 @@ int main()
 
 unsigned char CheckBit(unsigned int uValue)
 {
-	int n = sizeof(int)*8;
+	int n = sizeof(int) * 8;
 	int bit = 0;
 	for (int i = 0; i < n; i++)
 	{
 		if (uValue & 1 << i)
 		{
-		 	bit++;
+			bit++;
 		}
 	}
 	if (bit == 1)

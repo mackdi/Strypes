@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#define MAX_SIZE 10
+#define MAX_SIZE 20
 int IsEmpty();
 int IsFull();
 void Push(int nNewValue);
@@ -15,7 +15,7 @@ int main()
 
     while (IsFull())
     {
-        printf("Enter a new value:");
+        printf("Please enter number: ");
         scanf("%d", &value);
         Push(value);
     }

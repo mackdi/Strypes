@@ -1,25 +1,16 @@
 #ifndef DEFINITIONS
 #define DEFINITIONS
+#include "declarations.h"
 #include <stdlib.h>
 #include <limits.h>
-
-
-
-void push(node_t **Node, int data)
-{
-    node_t *n = malloc(sizeof(node_t));
-    n->data = data;
-    n->next = *Node;
-    *Node = n;
-}
-
+#include <stdio.h>
 
 void printList(node_t *head)
 {
     node_t *current = head;
     while (current != NULL)
     {
-        printf("%d\n", current->data);
+        printf("%ld\n", current->data);
         current = current->next;
     }
 }
@@ -35,4 +26,13 @@ int max(node_t *head)
     }
     return max;
 }
+
+void push(node_t **Node, int64_t data)
+{
+    node_t *n = malloc(sizeof(node_t));
+    n->data = data;
+    n->next = *Node;
+    *Node = n;
+}
+
 #endif

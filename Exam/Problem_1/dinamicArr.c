@@ -6,6 +6,7 @@
 
 char randBetween(int min, int max);
 
+
 int main(int argc, char const *argv[])
 {
     srand(time(NULL));
@@ -74,6 +75,7 @@ int main(int argc, char const *argv[])
 
     printArr(arr);
     printf("lower count: %d \n", lowerCount(arr));
+    mostCommon(arr);
     return 0;
 }
 
@@ -83,3 +85,4 @@ char randBetween(int min, int max)
     double div = RAND_MAX / range;
     return min + (rand() / div);
 }
+

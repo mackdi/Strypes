@@ -2,9 +2,9 @@
 #include <stdlib.h>
 #include <time.h>
 #include "declarations.h"
+#include <string.h>
 
 char randBetween(int min, int max);
-
 
 int main(int argc, char const *argv[])
 {
@@ -71,9 +71,9 @@ int main(int argc, char const *argv[])
     }
     arr = (char *)realloc(arr, (m + n + k + 1) * sizeof(char));
     arr[m + n + k + 1] = '\0';
-    //printf("%s\n", arr);
-    printArr(arr, m + n + k +1);
 
+    printArr(arr);
+    printf("lower count: %d \n", lowerCount(arr));
     return 0;
 }
 

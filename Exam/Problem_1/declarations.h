@@ -1,1 +1,2 @@
-void printArr(char *arr, int n);
+void printArr(char *arr);
+int lowerCount(char *str);

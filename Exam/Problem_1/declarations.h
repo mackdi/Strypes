@@ -1,0 +1,1 @@
+void printArr(char *arr, int n);

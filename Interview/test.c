@@ -7,14 +7,15 @@ int main(int argc, char const *argv[])
     int number = 1;
 
     //спомагателни променливи
-    int start_row = 0; // k
-    int start_col = 0; // l
-    int end_col = 5;   // n
-    int end_row = 5;   // m
+    int start_row = 0; // начало на реда
+    int start_col = 0; // начало на колоната
+    int end_col = 5;   // край на колоната
+    int end_row = 5;   // край на реда
 
     //деклариране на масива
     int a[end_col][end_row];
 
+    
     while (start_row < end_row && start_col < end_col)
     {
         // попълва първият ред до остатъка от end_col
@@ -31,7 +32,7 @@ int main(int argc, char const *argv[])
         }
         end_col--; 
 
-        // попълва последният ред
+        // попълва последният ред 
         if (start_row < end_row)
         {
             for (int i = end_col - 1; i >= start_col; --i)

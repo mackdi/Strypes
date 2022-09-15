@@ -6,6 +6,7 @@
 #include "declarations.h"
 #define COUNT 20
 
+
 int main(int argc, char const *argv[])
 {
     srand(time(NULL));
@@ -15,6 +16,7 @@ int main(int argc, char const *argv[])
         push(&head, rand());
     }
     printList(head);
-    printf("Max element is: %d\n", max(head));
+    printf("Max element is: %ld\n", max(head)->data);
+    //free(head);
     return 0;
 }

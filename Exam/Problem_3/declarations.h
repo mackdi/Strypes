@@ -11,5 +11,7 @@ typedef struct Node
 
 void push(node_t **Node, int64_t data);
 void printList(node_t *head);
-int max(node_t *head);
+node_t *max(node_t *head);
+//void free(node_t **list);
+uint64_t setedBitsSum(node_t* head);
 #endif

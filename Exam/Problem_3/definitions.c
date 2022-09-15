@@ -53,9 +53,9 @@ void push(node_t **Node, int64_t data)
 //     *list = NULL;
 // }
 
-uint64_t setedBitsSum(node_t* head)
+int bitsSum(node_t* head)
 {
-    uint64_t result = 0;
+    int result = 0;
     node_t* current = head;
     while (current != NULL) {
         for (int i = 0; i < 64; i++)
